@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ООО "Товары и услуги"</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="Логотип" />
+  </div>
+  <nav>
+    <ul>
+      <li><button class="scroll-btn" data-target="home">Главная</button></li>
+      <li><button class="scroll-btn" data-target="catalog">Каталог</button></li>
+      <li><button class="modal-btn" data-modal="about-modal">О нас</button></li>
+      <li><button class="modal-btn" data-modal="contacts-modal">Контакты</button></li>
+      <li><button id="cart-btn">Корзина (<span id="cart-count">0</span>)</button></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="home-section">
+  <div class="hero-bg"></div>
+  <div class="hero-text">
+    <h1>ООО "Nextech"</h1>
+    <p>
+      Добро пожаловать в ООО "Nextech" — ваш надёжный поставщик электроники и цифровой техники с 1995 года.  
+      Мы предлагаем широкий ассортимент смартфонов, игровых приставок и компьютеров, которые отвечают самым высоким стандартам качества.
+      Наша цель — сделать современные технологии доступными для каждого, обеспечивая отличный сервис и индивидуальный подход к каждому клиенту.
+    </p>
+    <p>
+      Высокое качество, выгодные цены и гарантия — вот наши приоритеты.  
+      Мы постоянно обновляем ассортимент, чтобы вы всегда могли найти новейшие модели и лучшие предложения.
+    </p>
+    <button class="scroll-btn go-catalog" data-target="catalog">Перейти в каталог</button>
+  </div>
+</section>
+
+<section id="catalog" class="catalog-section">
+  <h2>Каталог товаров</h2>
+  <div class="categories">
+
+    <div class="category-card">
+      <img src="tel.png" alt="Телефоны" />
+      <h3>Телефоны</h3>
+      <button class="btn-view" data-category="phones">Смотреть</button>
+    </div>
+
+    <div class="category-card">
+      <img src="pris.png" alt="Приставки" />
+      <h3>Приставки</h3>
+      <button class="btn-view" data-category="consoles">Смотреть</button>
+    </div>
+
+    <div class="category-card">
+      <img src="komp.png" alt="Компьютеры" />
+      <h3>Компьютеры</h3>
+      <button class="btn-view" data-category="computers">Смотреть</button>
+    </div>
+
+  </div>
+
+  <div id="phones" class="products-block">
+    <h3>Телефоны</h3>
+    <div class="products-list">
+      <div class="product-item" data-id="phone1">
+        <img src="tel1.jpg" alt="Телефон 1" />
+        <h4>Apple iPhone 15 Pro</h4>
+      </div>
+      <div class="product-item" data-id="phone2">
+        <img src="tel2.webp" alt="Телефон 2" />
+        <h4>Samsung Galaxy S23 Ultra</h4>
+      </div>
+      <div class="product-item" data-id="phone3">
+        <img src="tel3.webp" alt="Телефон 3" />
+        <h4>Google Pixel 7 Pro</h4>
+      </div>
+    </div>
+    <div class="product-info">
+      <h4 id="phone-title">Выберите товар</h4>
+      <p id="phone-desc">Характеристики и описание появятся здесь.</p>
+      <button id="buy-btn" disabled>Купить</button>
+    </div>
+  </div>
+
+  <div id="consoles" class="products-block">
+    <h3>Приставки</h3>
+    <div class="products-list">
+      <div class="product-item" data-id="pris1">
+        <img src="pris1.webp" alt="Приставка 1" />
+        <h4>Sony PlayStation 5</h4>
+      </div>
+      <div class="product-item" data-id="pris2">
+        <img src="pris2.webp" alt="Приставка 2" />
+        <h4>Xbox Series X</h4>
+      </div>
+      <div class="product-item" data-id="pris3">
+        <img src="pris3.webp" alt="Приставка 3" />
+        <h4>Nintendo Switch OLED</h4>
+      </div>
+    </div>
+    <div class="product-info">
+      <h4 id="pris-title">Выберите товар</h4>
+      <p id="pris-desc">Характеристики и описание появятся здесь.</p>
+      <button id="buy-btn-pris" disabled>Купить</button>
+    </div>
+  </div>
+
+  <div id="computers" class="products-block">
+    <h3>Компьютеры</h3>
+    <div class="products-list">
+      <div class="product-item" data-id="comp1">
+        <img src="komp1.jpg" alt="Компьютер 1" />
+        <h4>Dell XPS 8940</h4>
+      </div>
+      <div class="product-item" data-id="comp2">
+        <img src="komp2.png" alt="Компьютер 2" />
+        <h4>Apple Mac Studio</h4>
+      </div>
+      <div class="product-item" data-id="comp3">
+        <img src="komp3.jpg" alt="Компьютер 3" />
+        <h4>HP Omen 45L</h4>
+      </div>
+    </div>
+    <div class="product-info">
+      <h4 id="comp-title">Выберите товар</h4>
+      <p id="comp-desc">Характеристики и описание появятся здесь.</p>
+      <button id="buy-btn-comp" disabled>Купить</button>
+    </div>
+  </div>
+
+</section>
+
+<div id="about-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>О нас</h2>
+    <p>
+      ООО "Товары и услуги" — компания с многолетним опытом в сфере продажи электроники.  
+      Мы специализируемся на качественной технике: смартфонах, игровых приставках и компьютерах.  
+      Наша команда экспертов постоянно мониторит рынок, чтобы предлагать вам самые актуальные модели и выгодные цены.
+    </p>
+    <p>
+      Мы ценим доверие клиентов и гарантируем сервис высшего уровня, включая поддержку и консультации.  
+      Выбирая нас, вы выбираете качество, надежность и комфорт.
+    </p>
+  </div>
+</div>
+
+<div id="contacts-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Контакты</h2>
+    <p>
+      Мы всегда рады вашим вопросам и предложениям!<br />
+      <strong>Телефон:</strong> +7 (999) 123-45-67<br />
+      <strong>Email:</strong> info@company.kz<br />
+      <strong>Адрес:</strong> г. Кокшетау, ул. Пушкина, д. 1
+    </p>
+    <p>Режим работы: Пн-Пт 9:00 - 18:00</p>
+  </div>
+</div>
+
+<div id="cart-modal" class="modal">
+  <div class="modal-content cart-content">
+    <span class="close">&times;</span>
+    <h2>Корзина</h2>
+    <ul id="cart-list">
+      <li>Корзина пуста</li>
+    </ul>
+    <button id="clear-cart-btn" disabled>Очистить корзину</button>
+  </div>
+</div>
+
+<script>
+  const productsData = {
+    phone1: { title: "Apple iPhone 15 Pro", desc: "Apple iPhone 15 Pro оснащён 6.1-дюймовым экраном Super Retina XDR с частотой обновления 120 Гц и работает на процессоре Apple A17 Pro. У него тройная основная камера с модулями на 48, 12 и 12 мегапикселей. Варианты памяти включают 128, 256 и 512 ГБ, при этом оперативной памяти 8 ГБ. Аккумулятор ёмкостью около 3200 мАч поддерживает быструю зарядку мощностью 27 Вт. Операционная система — iOS 17." },
+    phone2: { title: "Samsung Galaxy S23 Ultra", desc: "Samsung Galaxy S23 Ultra получил 6.8-дюймовый Dynamic AMOLED 2X экран с разрешением QHD+ и частотой обновления 120 Гц. В его основе лежит процессор Snapdragon 8 Gen 2. Основная камера включает четыре модуля с разрешением 200, 12, 10 и 10 мегапикселей. Варианты памяти — 256 и 512 ГБ с оперативной памятью 8 или 12 ГБ. Аккумулятор на 5000 мАч поддерживает быструю зарядку 45 Вт. Работает на Android 13 с оболочкой One UI 5.1." },
+    phone3: { title: "Google Pixel 7 Pro", desc: "Google Pixel 7 Pro оборудован 6.7-дюймовым LTPO OLED экраном с разрешением QHD+ и частотой обновления 120 Гц. В нём установлен процессор Google Tensor G2. Камеры включают основной модуль на 50 МП, телеобъектив на 48 МП и ультраширокий на 12 МП. Варианты памяти: 128, 256 и 512 ГБ, а оперативная память — 12 ГБ. Аккумулятор ёмкостью 5000 мАч поддерживает быструю зарядку 30 Вт. ОС — Android 13." },
+    pris1: { title: "Sony PlayStation 5", desc: "Sony PlayStation 5 работает на восьмиядерном процессоре AMD Ryzen Zen 2 с частотой 3.5 ГГц и графическом процессоре AMD RDNA 2 с производительностью 10.28 терафлопс. Она оснащена 16 ГБ памяти GDDR6 и быстрым SSD на 825 ГБ. Консоль поддерживает вывод изображения в 4K с частотой 120 Гц и трассировку лучей." },
+    pris2: { title: "Xbox Series X", desc: "Xbox Series X построена на процессоре AMD Ryzen Zen 2 с частотой 3.8 ГГц и видеокарте AMD RDNA 2 с мощностью 12 терафлопс. В ней установлено 16 ГБ памяти GDDR6 и 1 ТБ SSD. Поддерживает 4K, 120 Гц и трассировку лучей." },
+    pris3: { title: "Nintendo Switch OLED", desc: "Nintendo Switch OLED использует процессор NVIDIA Tegra X1, имеет 7-дюймовый OLED экран с разрешением 720p. Встроенная память — 64 ГБ. Консоль может работать в портативном режиме с 720p и подключаться к телевизору с выводом до 1080p." },
+    comp1: { title: "Dell XPS 8940", desc: "Dell XPS 8940 — настольный компьютер с процессором Intel Core i7-12700 двенадцатого поколения, 16 ГБ оперативной памяти DDR4 и видеокартой NVIDIA GeForce RTX 3060 с 12 ГБ видеопамяти. Для хранения данных предусмотрен тандем из 512 ГБ SSD и 1 ТБ HDD. Работает под управлением Windows 11 Home." },
+    comp2: { title: "Apple Mac Studio", desc: "Apple Mac Studio на базе чипа M2 Ultra с 24 ядрами процессора и 76 ядрами графики обладает 64 ГБ объединённой памяти и 1 ТБ SSD. Среди портов — Thunderbolt 4, USB-A, HDMI и Ethernet. Система — macOS Sonoma." },
+    comp3: { title: "HP Omen 45L", desc: "HP Omen 45L оснащён процессором Intel Core i9-13900K, 32 ГБ DDR5 памяти и видеокартой NVIDIA RTX 4090 с 24 ГБ видеопамяти. Для данных предусмотрены 1 ТБ NVMe SSD и 2 ТБ HDD. ОС — Windows 11 Pro." }
+  };
+
+  let cart = [];
+
+  function showCategory(category) {
+    document.querySelectorAll('.products-block').forEach(block => {
+      block.classList.remove('active');
+    });
+    const block = document.getElementById(category);
+    if (block) block.classList.add('active');
+  }
+
+  function setupCategory(category, titleId, descId, buyBtnId) {
+    const productsList = document.querySelector(`#${category} .products-list`);
+    const title = document.getElementById(titleId);
+    const desc = document.getElementById(descId);
+    const buyBtn = document.getElementById(buyBtnId);
+    let selectedId = null;
+
+    productsList.querySelectorAll('.product-item').forEach(item => {
+      item.addEventListener('click', () => {
+        productsList.querySelectorAll('.product-item').forEach(i => i.classList.remove('selected'));
+        item.classList.add('selected');
+        selectedId = item.dataset.id;
+        title.textContent = productsData[selectedId].title;
+        desc.textContent = productsData[selectedId].desc;
+        buyBtn.disabled = false;
+      });
+    });
+
+    buyBtn.addEventListener('click', () => {
+      if (!selectedId) return;
+      cart.push(productsData[selectedId].title);
+      updateCart();
+      alert(`Товар "${productsData[selectedId].title}" добавлен в корзину!`);
+    });
+  }
+
+  function updateCart() {
+    const cartList = document.getElementById('cart-list');
+    const clearBtn = document.getElementById('clear-cart-btn');
+    cartList.innerHTML = '';
+    if (cart.length === 0) {
+      cartList.innerHTML = '<li>Корзина пуста</li>';
+      clearBtn.disabled = true;
+    } else {
+      cart.forEach((item, idx) => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        cartList.appendChild(li);
+      });
+      clearBtn.disabled = false;
+    }
+    document.getElementById('cart-count').textContent = cart.length;
+  }
+
+  document.getElementById('clear-cart-btn').addEventListener('click', () => {
+    cart = [];
+    updateCart();
+  });
+
+  document.querySelectorAll('.btn-view').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.category;
+      showCategory(cat);
+      document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  document.querySelectorAll('.scroll-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.target;
+      const targetElem = document.getElementById(targetId);
+      if (targetElem) {
+        targetElem.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  document.querySelectorAll('.modal-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = btn.dataset.modal;
+      document.getElementById(modalId).style.display = 'block';
+    });
+  });
+
+  document.querySelectorAll('.modal .close').forEach(span => {
+    span.addEventListener('click', () => {
+      span.closest('.modal').style.display = 'none';
+    });
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+      e.target.style.display = 'none';
+    }
+  });
+
+  document.getElementById('cart-btn').addEventListener('click', () => {
+    document.getElementById('cart-modal').style.display = 'block';
+  });
+
+  setupCategory('phones', 'phone-title', 'phone-desc', 'buy-btn');
+  setupCategory('consoles', 'pris-title', 'pris-desc', 'buy-btn-pris');
+  setupCategory('computers', 'comp-title', 'comp-desc', 'buy-btn-comp');
+
+  updateCart();
+</script>
+
+</body>
+</html>
